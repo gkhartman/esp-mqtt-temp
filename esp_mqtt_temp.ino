@@ -9,19 +9,10 @@
 #include <DallasTemperature.h>
 #include <OneWire.h>
 #include <PubSubClient.h>       // PubSubClient (MQTT Client)
+#include "esp_config.h"
 
 // Data wire is plugged into gpio pin 2 on the esp8266
 #define ONE_WIRE_BUS_PIN 2
-const char* SSID = "";
-const char* WIFI_PASSWD = "";
-const char* MQTT_HOST = "";
-const int MQTT_PORT = 1883;
-const char* MQTT_USER = "";
-const char* MQTT_PASSWD = "";
-const char* MQTT_CLIENT_ID = "esp-temperature-1";
-const int8_t MAX_WIFI_RETRY_TICKS = 40;
-const int8_t MAX_MQTT_RETRY_COUNT = 40;
-const int DEEP_SLEEP_USECONDS = 6e8; // 10 minutes in microseconds
 
 // Init temperature sensor init
 OneWire oneWire(ONE_WIRE_BUS_PIN);

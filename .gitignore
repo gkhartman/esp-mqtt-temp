@@ -1,0 +1,4 @@
+# Don't commit private config info
+esp_config.h
+
+*.o
